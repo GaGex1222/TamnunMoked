@@ -10,7 +10,6 @@ const securityServices = [
   { name: "מערכות אזעקה", href: "/alarm-systems" },
   { name: "מצלמות אבטחה ושליטה", href: "/cameras" },
   { name: "מכתבי המלצה", href: "/recommendation-letters" },
-  { name: "מוצרים", href: "/products" },
   { name: "שירות אנליטיקה בענן", href: "/cloud-analytics" },
 ];
 
@@ -130,7 +129,6 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link href="/insurance" onClick={() => setIsOpen(false)} className="font-bold text-black text-lg py-2">דרישות ביטוח</Link>
               <Link href="/contact" onClick={() => setIsOpen(false)} className="font-bold text-black text-lg py-2">צור קשר</Link>
               
               <a href="tel:1700505050" className="flex items-center gap-2 text-[#f27c21] font-bold py-4">

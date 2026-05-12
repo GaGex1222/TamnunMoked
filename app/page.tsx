@@ -19,6 +19,17 @@ export default function LandingPage() {
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const partners = [
+    { name: "Alhua", src: "/alhua.png" },
+    { name: "Energizer", src: "/energizer.png" },
+    { name: "Flowless", src: "/flowless.png" },
+    { name: "Hashmal", src: "/hashmal.png" },
+    { name: "Health", src: "/health.png" },
+    { name: "Holmes Place", src: "/holmesplace.png" },
+    { name: "Ikea", src: "/ikea.png" },
+    { name: "Zim", src: "/zim.png" },
+  ];
+
   const videos = [
     { id: "YZnw_ecUZbg", title: "מרכז הבקרה בפעולה" },
     { id: "42NuhauZmi4", title: "תגובת צוותי הסיור" },
@@ -72,6 +83,9 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Partners Section */}
+{/* Partners Section */}
+
       {/* Services Section */}
       <section id="services" className="py-20 px-6 max-w-7xl mx-auto w-full bg-white">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -97,6 +111,46 @@ export default function LandingPage() {
               <p className="text-sm text-gray-500 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">{s.desc}</p>
             </motion.a>
           ))}
+        </div>
+      </section>
+
+            <section className="py-16 bg-white overflow-hidden border-t border-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl font-black text-[#1a1a1a] uppercase tracking-widest mb-2">השמות הגדולים שבוחרים בנו</h2>
+            <div className="w-24 h-1 bg-[#f27c21] mx-auto"></div>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {partners.map((partner, index) => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: (index * 0.1) + Math.random() * 0.2,
+                  duration: 0.5 
+                }}
+                whileHover={{ 
+                  scale: 1.1,
+                  filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.1))"
+                }}
+                className="w-32 md:w-44 h-24 relative flex items-center justify-center transition-all cursor-pointer"
+              >
+                <img 
+                  src={partner.src} 
+                  alt={partner.name} 
+                  className="max-w-full max-h-full object-contain p-2"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
