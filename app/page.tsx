@@ -76,10 +76,10 @@ export default function LandingPage() {
       <section id="services" className="py-20 px-6 max-w-7xl mx-auto w-full bg-white">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            { icon: <MdOutlineSecurity size={60} />, title: "שירותי מוקד, סיור ובקרה", desc: "ניידות סיור בפריסה ארצית הנותנות מענה מיידי לכל קריאה מהמוקד המבצעי המאויש 24/7.", href: "#" },
-            { icon: <HiOutlineVideoCamera size={60} />, title: "מצלמות אבטחה ושליטה", desc: "התקנת מערכות צילום מתקדמות המאפשרות צפייה מרחוק ושליטה מלאה על הנעשה בעסק או בבית.", href: "#" },
-            { icon: <HiOutlineStatusOnline size={60} />, title: "מוקד וידאו אנליטיקה", desc: "טכנולוגיית זיהוי חכמה המנתחת אירועים בזמן אמת ומתריעה על פעילות חשודה באופן אוטומטי.", href: "#" },
-            { icon: <HiOutlineShieldCheck size={60} />, title: "מערכות אזעקה", desc: "מערכות אזעקה וגילוי פריצה המחוברות ישירות למוקד המבצעי להגנה היקפית מקסימלית.", href: "#" }
+            { icon: <MdOutlineSecurity size={60} />, title: "שירותי מוקד, סיור ובקרה", desc: "ניידות סיור בפריסה ארצית הנותנות מענה מיידי לכל קריאה מהמוקד המבצעי המאויש 24/7.", href: "/cars" },
+            { icon: <HiOutlineVideoCamera size={60} />, title: "מצלמות אבטחה ושליטה", desc: "התקנת מערכות צילום מתקדמות המאפשרות צפייה מרחוק ושליטה מלאה על הנעשה בעסק או בבית.", href: "/cameras" },
+            { icon: <HiOutlineStatusOnline size={60} />, title: "מוקד וידאו אנליטיקה", desc: "טכנולוגיית זיהוי חכמה המנתחת אירועים בזמן אמת ומתריעה על פעילות חשודה באופן אוטומטי.", href: "/analytical-cameras" },
+            { icon: <HiOutlineShieldCheck size={60} />, title: "מערכות אזעקה", desc: "מערכות אזעקה וגילוי פריצה המחוברות ישירות למוקד המבצעי להגנה היקפית מקסימלית.", href: "/alarm-systems" }
           ].map((s, i) => (
             <motion.a
               key={i}

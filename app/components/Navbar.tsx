@@ -5,13 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
 const securityServices = [
-  { name: "שירותי מוקד, סיור ובקרה", href: "/services/patrol", highlight: true },
-  { name: "מוקד וידאו אנליטיקה", href: "/services/video-analytics" },
-  { name: "מערכות אזעקה", href: "/services/alarms" },
-  { name: "מצלמות אבטחה ושליטה", href: "/services/cctv" },
-  { name: "מכתבי המלצה", href: "/recommendations" },
+  { name: "שירותי מוקד, סיור ובקרה", href: "/cars", highlight: true },
+  { name: "מוקד וידאו אנליטיקה", href: "/analytical-cameras" },
+  { name: "מערכות אזעקה", href: "/alarm-systems" },
+  { name: "מצלמות אבטחה ושליטה", href: "/cameras" },
+  { name: "מכתבי המלצה", href: "/recommendation-letters" },
   { name: "מוצרים", href: "/products" },
-  { name: "שירות אנליטיקה בענן", href: "/services/cloud-analytics" },
+  { name: "שירות אנליטיקה בענן", href: "/cloud-analytics" },
 ];
 
 export default function Navbar() {
