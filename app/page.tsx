@@ -212,10 +212,6 @@ export default function LandingPage() {
                   <FaArrowLeft className="group-hover:-translate-x-2 transition-transform" size={18} />
                 </Link>
                 
-                <div className="flex flex-col items-center md:items-start">
-                  <span className="text-gray-400 text-sm">זמינים במוקד המבצעי</span>
-                  <a href="tel:*9090" className="text-2xl font-black hover:text-[#f27c21] transition-colors">*9090</a>
-                </div>
               </div>
 
               {/* Social Links */}
