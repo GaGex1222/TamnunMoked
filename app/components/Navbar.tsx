@@ -16,19 +16,19 @@ const securityServices = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false); // State חדש לקולפס במובייל
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b-4 border-[#f27c21] shadow-sm" dir="rtl">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
         
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="text-[#f27c21] font-black text-3xl leading-none italic">▲</div>
-          <div className="flex flex-col">
-            <span className="font-black text-xl text-black leading-tight">מוקד תמנון</span>
-            <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Security Services</span>
-          </div>
+        {/* Logo Section */}
+        <Link href="/" className="flex items-center">
+          <img 
+            src="/logo.png" // החלף כאן לנתיב הלוגו שלך (למשל: /images/logo.png)
+            alt="מוקד תמנון לוגו" 
+            className="h-12 md:h-14 w-auto object-contain transition-transform hover:scale-105" 
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -94,7 +94,6 @@ export default function Navbar() {
             <div className="flex flex-col p-6 gap-2">
               <Link href="/" onClick={() => setIsOpen(false)} className="font-bold text-black text-lg py-2">ראשי</Link>
               
-              {/* Collapsible Mobile Item */}
               <div className="border-b border-gray-50 pb-2">
                 <button 
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}

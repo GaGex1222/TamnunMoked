@@ -87,29 +87,47 @@ export default function LandingPage() {
 {/* Partners Section */}
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-6 max-w-7xl mx-auto w-full bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {[
-            { icon: <MdOutlineSecurity size={60} />, title: "שירותי מוקד, סיור ובקרה", desc: "ניידות סיור בפריסה ארצית הנותנות מענה מיידי לכל קריאה מהמוקד המבצעי המאויש 24/7.", href: "/cars" },
-            { icon: <HiOutlineVideoCamera size={60} />, title: "מצלמות אבטחה ושליטה", desc: "התקנת מערכות צילום מתקדמות המאפשרות צפייה מרחוק ושליטה מלאה על הנעשה בעסק או בבית.", href: "/cameras" },
-            { icon: <HiOutlineStatusOnline size={60} />, title: "מוקד וידאו אנליטיקה", desc: "טכנולוגיית זיהוי חכמה המנתחת אירועים בזמן אמת ומתריעה על פעילות חשודה באופן אוטומטי.", href: "/analytical-cameras" },
-            { icon: <HiOutlineShieldCheck size={60} />, title: "מערכות אזעקה", desc: "מערכות אזעקה וגילוי פריצה המחוברות ישירות למוקד המבצעי להגנה היקפית מקסימלית.", href: "/alarm-systems" }
-          ].map((s, i) => (
-            <motion.a
-              key={i}
-              href={s.href}
-              whileHover={{ scale: 1.02 }}
-              className="relative p-10 flex flex-col items-center text-center group transition-all border border-transparent hover:border-gray-50"
-            >
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gray-200 group-hover:border-[#f27c21]" />
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gray-200 group-hover:border-[#f27c21]" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gray-200 group-hover:border-[#f27c21]" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gray-200 group-hover:border-[#f27c21]" />
+{/* Services Section */}
+      <section id="services" className="py-24 px-6 max-w-7xl mx-auto w-full bg-white">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-black text-[#1a1a1a] mb-4">הפתרונות המקצועיים שלנו</h2>
+          <p className="text-gray-500 text-lg">מעטפת הגנה מושלמת המותאמת אישית לצרכים שלך</p>
+        </div>
 
-              <div className="text-gray-300 group-hover:text-[#f27c21] mb-6 transition-colors">{s.icon}</div>
-              <h3 className="font-black text-xl mb-4 text-[#1a1a1a]">{s.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">{s.desc}</p>
-            </motion.a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { icon: <MdOutlineSecurity size={48} />, title: "שירותי מוקד וסיור", desc: "ניידות סיור בפריסה ארצית הנותנות מענה מיידי לכל קריאה מהמוקד המאויש 24/7.", href: "/cars", btnText: "לפרטי הסיור" },
+            { icon: <HiOutlineVideoCamera size={48} />, title: "מצלמות אבטחה", desc: "התקנת מערכות צילום חכמות המאפשרות צפייה מרחוק ושליטה מלאה מכל מקום.", href: "/cameras", btnText: "לצפייה בפתרונות" },
+            { icon: <HiOutlineStatusOnline size={48} />, title: "וידאו אנליטיקה", desc: "טכנולוגיית זיהוי פנים ותנועה המנתחת אירועים ומתריעה על פעילות חשודה.", href: "/analytical-cameras", btnText: "גלו את הטכנולוגיה" },
+            { icon: <HiOutlineShieldCheck size={48} />, title: "מערכות אזעקה", desc: "מערכות גילוי פריצה מתקדמות המחוברות ישירות למוקד להגנה היקפית.", href: "/alarm-systems", btnText: "למערכות המיגון" }
+          ].map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-gray-50 rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:shadow-xl transition-all group"
+            >
+              <div className="text-[#f27c21] mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                {s.icon}
+              </div>
+              
+              <h3 className="font-black text-2xl mb-4 text-[#1a1a1a]">{s.title}</h3>
+              
+              <p className="text-gray-600 leading-relaxed mb-8 flex-grow font-medium">
+                {s.desc}
+              </p>
+
+              <motion.a
+                href={s.href}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-white border-2 border-[#f27c21] text-[#f27c21] py-3 rounded-xl font-bold text-center group-hover:bg-[#f27c21] group-hover:text-white transition-all shadow-sm"
+              >
+                {s.btnText}
+              </motion.a>
+            </motion.div>
           ))}
         </div>
       </section>
